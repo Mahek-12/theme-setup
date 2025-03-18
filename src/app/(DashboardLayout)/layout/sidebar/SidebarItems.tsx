@@ -12,9 +12,7 @@ import {
 import Menuitems from "./MenuItems";
 import Link from "next/link";
 
-
 import { IconPoint } from "@tabler/icons-react";
-import Upgrade from "./Updrade";
 
 const renderMenuItems = (items: any[], pathDirect: string) => {
   return items.map((item) => {
@@ -75,16 +73,10 @@ const SidebarItems = () => {
         themeColor="#1e4db7"
         themeSecondaryColor="#1a97f51a"
       >
-        <Box sx={{ margin: "0 -24px" }}>
-          <Logo img="/images/logos/logo-dark.svg" component={Link} href="/">
-            Spike
-          </Logo>
-        </Box>
+        <Box>Logo</Box>
 
         {renderMenuItems(Menuitems, pathDirect)}
-
       </MUI_Sidebar>
-
     </Box>
   );
 };

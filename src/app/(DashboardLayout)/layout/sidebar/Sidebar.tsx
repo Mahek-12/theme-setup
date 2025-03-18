@@ -2,16 +2,12 @@ import { useMediaQuery, Box, Drawer } from "@mui/material";
 import SidebarItems from "./SidebarItems";
 import { DashboardContext } from "@/app/context/DashboardContext";
 import { useContext } from "react";
-import Upgrade from "./Updrade";
 import Scrollbar from "../../components/custom-scroll/Scrollbar";
 
-
-const Sidebar = ({
-}) => {
+const Sidebar = ({}) => {
   const lgUp = useMediaQuery((theme: any) => theme.breakpoints.up("lg"));
   const { isMobileSidebar, setIsMobileSidebar } = useContext(DashboardContext);
   const sidebarWidth = "270px";
-
 
   if (lgUp) {
     return (
@@ -32,7 +28,7 @@ const Sidebar = ({
             sx: {
               width: sidebarWidth,
               boxSizing: "border-box",
-              top: '64px'
+              top: "64px",
             },
           }}
         >
@@ -40,14 +36,11 @@ const Sidebar = ({
           {/* Sidebar Box */}
           {/* ------------------------------------------- */}
           <Scrollbar sx={{ height: "calc(100% - 73px)" }}>
-            <Box
-
-            >
+            <Box>
               {/* ------------------------------------------- */}
               {/* Sidebar Items */}
               {/* ------------------------------------------- */}
               <SidebarItems />
-              <Upgrade />
             </Box>
           </Scrollbar>
         </Drawer>
@@ -68,17 +61,14 @@ const Sidebar = ({
         },
       }}
     >
-
       {/* ------------------------------------------- */}
       {/* Sidebar For Mobile */}
       {/* ------------------------------------------- */}
       <Scrollbar sx={{ height: "calc(100% - 73px)" }}>
         <SidebarItems />
       </Scrollbar>
-      <Upgrade />
     </Drawer>
   );
 };
 
 export default Sidebar;
-

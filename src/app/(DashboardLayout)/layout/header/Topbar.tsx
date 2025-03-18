@@ -1,11 +1,6 @@
-import { Box, AppBar, Toolbar, styled, Stack, Button } from "@mui/material";
+import { Box, AppBar, Toolbar, styled, Stack } from "@mui/material";
 
-import { IconLifebuoy, IconGift, IconBriefcase } from "@tabler/icons-react";
-import { Typography } from "@mui/material";
 import Link from "next/link";
-import LivePreviewDropdown from "./LivePreviewDropdown";
-import BuyNowDropdown from "./BuyNowDropdown";
-
 const Topbar = () => {
   const AppBarStyled = styled(AppBar)(({ theme }) => ({
     boxShadow: "none",
@@ -22,20 +17,6 @@ const Topbar = () => {
     color: theme.palette.text.secondary,
   }));
 
-  const GhostButton = styled(Button)(({ theme }) => ({
-    color: theme.palette.primary.contrastText,
-    backgroundColor: "#ffffff00",
-    boxShadow: "none",
-    borderRadius: "7px",
-    fontWeight: 400,
-    "&:hover": {
-      backgroundColor: theme.palette.primary.main,
-    },
-    "& .MuiButton-startIcon": {
-      marginRight: "4px",
-    },
-  }));
-
   return (
     <AppBarStyled position="sticky" color="default">
       <ToolbarStyled sx={{ flexWrap: "wrap" }}>
@@ -50,83 +31,16 @@ const Topbar = () => {
             width: { xs: "100%", lg: "auto" },
           }}
         >
-          <Link href="https://www.wrappixel.com/">
-            <img src="/images/logos/logo-wrappixel.svg" alt="logo" />
-          </Link>
+          <Link href="/">Logo</Link>
           <Stack
             spacing={1}
             direction="row"
             sx={{ flexWrap: "wrap", display: { xs: "none", lg: "flex" } }}
           >
-            <Box sx={{ display: "flex", alignItems: "center" }}>
-              <Link
-                href="https://support.wrappixel.com/"
-                style={{ display: "flex", height: "fit-content" }}
-                target="_blank"
-              >
-                <GhostButton
-                  startIcon={<IconLifebuoy size={18} />}
-                  variant="contained"
-                >
-                  Support
-                </GhostButton>
-              </Link>
-            </Box>
-            <Box sx={{ display: "flex", alignItems: "center" }}>
-              <Link
-                href="https://www.wrappixel.com/"
-                style={{ display: "flex", height: "fit-content" }}
-                target="_blank"
-              >
-                <GhostButton
-                  startIcon={<IconGift size={18} />}
-                  variant="contained"
-                >
-                  Templates
-                </GhostButton>
-              </Link>
-            </Box>
-            <Box sx={{ display: "flex", alignItems: "center" }}>
-              <Link
-                href="https://www.wrappixel.com/hire-us/"
-                style={{ display: "flex", height: "fit-content" }}
-                target="_blank"
-              >
-                <GhostButton
-                  startIcon={<IconBriefcase size={18} />}
-                  variant="contained"
-                >
-                  Hire us
-                </GhostButton>
-              </Link>
-            </Box>
+            <Box sx={{ display: "flex", alignItems: "center" }}>Item1</Box>
+            <Box sx={{ display: "flex", alignItems: "center" }}>Item2</Box>
+            <Box sx={{ display: "flex", alignItems: "center" }}>Item3</Box>
           </Stack>
-        </Stack>
-        <Box
-          sx={{
-            flexGrow: 1,
-          }}
-        />
-        <Stack
-          spacing={1}
-          direction="row"
-          sx={{
-            alignItems: "center",
-            flexWrap: "wrap",
-            justifyContent: "center",
-            gap: { xs: "10px", lg: "0px" },
-            padding: { xs: "0px 0px 10px 0px", lg: "0px 0px" },
-          }}
-        >
-          <Typography
-            variant="h5"
-            sx={{ color: (theme) => theme.palette.primary.contrastText }}
-          >
-            Check Flexy Premium Version
-          </Typography>
-          {/* <DropdownMenu/> */}
-          <LivePreviewDropdown />
-          <BuyNowDropdown />
         </Stack>
       </ToolbarStyled>
     </AppBarStyled>
