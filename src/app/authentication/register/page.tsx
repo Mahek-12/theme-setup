@@ -2,7 +2,6 @@
 import React from "react";
 import Link from "next/link";
 import { Grid2 as Grid, Box, Card, Stack, Typography } from "@mui/material";
-import Logo from "@/app/(DashboardLayout)/layout/shared/logo/Logo";
 
 import AuthRegister from "../auth/AuthRegister";
 

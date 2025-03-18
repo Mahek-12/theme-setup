@@ -21,21 +21,13 @@ const PageWrapper = styled("div")(() => ({
   backgroundColor: "transparent",
 }));
 
-interface Props {
-  children: React.ReactNode;
-}
-
-
-
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-
   return (
     <MainWrapper className="mainwrapper">
-
       {/* ------------------------------------------- */}
       {/* Main Wrapper */}
       {/* ------------------------------------------- */}
@@ -46,17 +38,14 @@ export default function RootLayout({
         {/* Sidebar */}
         {/* ------------------------------------------- */}
 
-        <Sidebar
-
-        />
+        <Sidebar />
         {/* ------------------------------------------- */}
         {/* PageContent */}
         {/* ------------------------------------------- */}
         <Box
           sx={{
-
             [theme.breakpoints.up("lg")]: {
-              marginLeft: '270px',
+              marginLeft: "270px",
             },
           }}
         >
@@ -68,11 +57,9 @@ export default function RootLayout({
             sx={{
               paddingTop: "20px",
               maxWidth: "1200px",
-              minHeight: 'calc(100vh - 240px)'
+              minHeight: "calc(100vh - 240px)",
             }}
           >
-
-
             {/* ------------------------------------------- */}
             {/* Page Route */}
             {/* ------------------------------------------- */}
@@ -80,8 +67,6 @@ export default function RootLayout({
             {/* ------------------------------------------- */}
             {/* End Page */}
             {/* ------------------------------------------- */}
-
-
           </Container>
           {/* ------------------------------------------- */}
           {/* Footer */}
@@ -92,4 +77,3 @@ export default function RootLayout({
     </MainWrapper>
   );
 }
-
